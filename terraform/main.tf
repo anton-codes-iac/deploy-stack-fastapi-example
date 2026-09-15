@@ -121,7 +121,7 @@ resource "aws_ecs_task_definition" "app" {
         ]
       )
       
-      command = ["uvicorn","app.main:app","--host","0.0.0.0","--port","8000","--proxy-headers","--forwarded-allow-ips=","*"]
+      command = ["uvicorn","app.main:app","--host","0.0.0.0","--port","8000","--proxy-headers","--forwarded-allow-ips","*"]
 
       portMappings = [
         {
